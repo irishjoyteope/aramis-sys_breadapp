@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="1638.0" style="-fx-background-color: #35324D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oopclass.breadapp.controllers.ServiceController">
+   <children>
+      <Pane prefHeight="586.0" prefWidth="322.0" style="-fx-background-color: #62487C;">
+         <children>
+            <Button fx:id="paymentBtn" layoutX="228.0" layoutY="10.0" mnemonicParsing="false" onAction="#paymentBtn" prefHeight="30.0" style="-fx-background-color: #8270A4; -fx-background-radius: 30 30 30 30;" text="Payments" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="customerBtn" layoutX="139.0" layoutY="10.0" mnemonicParsing="false" onAction="#customerBtn" prefHeight="30.0" style="-fx-background-color: #8270A4; -fx-background-radius: 30 30 30 30;" text="Customers" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="customerId" layoutX="17.0" layoutY="141.0" prefHeight="25.0" prefWidth="285.0" promptText="Customer ID" />
+            <DatePicker fx:id="created" layoutX="17.0" layoutY="384.0" prefHeight="25.0" prefWidth="285.0" promptText="Created at" />
+            <DatePicker fx:id="updated" layoutX="17.0" layoutY="426.0" prefHeight="25.0" prefWidth="285.0" promptText="Updated at" />
+            <Label layoutX="17.0" layoutY="60.0" prefHeight="17.0" prefWidth="285.0" text="Services:" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="serviceId" layoutX="23.0" layoutY="60.0" prefHeight="17.0" prefWidth="285.0" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button fx:id="reset" layoutX="25.0" layoutY="501.0" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #8270A4; -fx-background-radius: 30 30 30 30;" text="Reset" textFill="WHITE" />
+      <Button fx:id="save" layoutX="128.0" layoutY="501.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #8270A4; -fx-background-radius: 30 30 30 30;" text="Save" textFill="WHITE" />
+      <Button fx:id="delete" layoutX="225.0" layoutY="501.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #8270A4; -fx-background-radius: 30 30 30 30;" text="Delete" textFill="WHITE" />
+      <TextField fx:id="category" layoutX="17.0" layoutY="182.0" prefHeight="25.0" prefWidth="285.0" promptText="Category" />
+      <TextField fx:id="status" layoutX="17.0" layoutY="222.0" prefHeight="25.0" prefWidth="285.0" promptText="Status" />
+      <TextField fx:id="estimatedHours" layoutX="17.0" layoutY="263.0" prefHeight="25.0" prefWidth="285.0" promptText="Estimated Hours" />
+      <TextField fx:id="spentHours" layoutX="17.0" layoutY="303.0" prefHeight="25.0" prefWidth="285.0" promptText="Spent Hours" />
+      <TextField fx:id="nextServiceDate" layoutX="17.0" layoutY="344.0" prefHeight="25.0" prefWidth="285.0" promptText="Next Service Date" />
+      <TableView layoutX="322.0" prefHeight="586.0" prefWidth="1317.0" style="-fx-background-color: #a9a9a9;">
+         <columns>
+            <TableColumn fx:id="colServiceId" prefWidth="200.0" text="Service ID" />
+            <TableColumn fx:id="colCustomerId" prefWidth="200.0" text="Customer ID" />
+            <TableColumn fx:id="colCategory" prefWidth="200.0" text="Category" />
+            <TableColumn fx:id="colServiceStatus" minWidth="5.0" prefWidth="200.0" text="Service Status" />
+            <TableColumn fx:id="colEstimatedHours" minWidth="0.0" prefWidth="200.0" text="Estimated Hours" />
+            <TableColumn fx:id="colSpentHours" minWidth="0.0" prefWidth="121.0" text="SpentHours" />
+            <TableColumn fx:id="colNextServiceDate" minWidth="0.0" prefWidth="120.0" text="Next Service Date" />
+            <TableColumn fx:id="colEdit" minWidth="0.0" prefWidth="75.0" text="Edit" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
